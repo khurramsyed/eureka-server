@@ -1,6 +1,6 @@
 # Spring Cloud Eureka Server Example
 
-##How to Run the server 
+## How to Run the server 
 
 In order to run applications 
 
