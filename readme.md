@@ -9,4 +9,46 @@ vm parameter -Dspring.profiles.active should be set to
  
 ```-Dspring.profiles.active=primary```
  
- 
+
+## Eureaka Settings 
+
+* Using application.yml *
+
+```
+---
+spring:
+ profiles: primary
+ application:
+  name: eureka-server-clustered
+server:
+ port: 8010
+eureka:
+ client:
+  serviceUrl:
+   defaultZone: http://localhost:8011/eureka/,http://localhost:8012/eureka/
+
+---
+spring:
+ profiles: secondary
+ application:
+  name: eureka-server-clustered
+server:
+  port: 8011
+eureka:
+ client:
+  serviceUrl:
+   defaultZone: http://localhost:8012/eureka/,http://localhost:8010/eureka/
+---
+spring:
+  profiles: tertiary
+  application:
+    name: eureka-server-clustered
+server:
+  port: 8012
+eureka:
+ instance:
+  client:
+   serviceUrl:
+    defaultZone: http://localhost:8010/eureka/,http://localhost:8011/eureka/
+    
+```
