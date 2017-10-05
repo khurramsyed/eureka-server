@@ -52,3 +52,11 @@ eureka:
     defaultZone: http://localhost:8010/eureka/,http://localhost:8011/eureka/
     
 ```
+
+## References 
+
+* https://concourse.ci/docker-repository.html - Installing Concourse using Docker-compose
+* https://concourse.ci/hello-world.html - Sample Hello World Example
+* https://github.com/concourse/concourse
+* https://github.com/nitram509/concourse-java-maven-test-prj
+
