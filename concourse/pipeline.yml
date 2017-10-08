@@ -2,7 +2,7 @@ resources:
   - name: source-code
     type: git
     source:
-      uri: https://github.com/khurramsyed/lab4eurekaserver.git
+      uri: https://github.com/khurramsyed/eureka-server.git
       branch: master
 
 jobs:
